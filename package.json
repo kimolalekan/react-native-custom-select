@@ -1,0 +1,41 @@
+{
+  "name": "react-native-custom-select",
+  "version": "1.0.1",
+  "description": "A customizable React Native dropdown/select component supporting single and multiple selection modes, with features like search, select all, and flexible styling options for seamless integration",
+  "source": "src/index.jsx",
+  "main": "dist/main.js",
+  "typings": "react-native-custom-select.d.ts",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kimolalekan/react-native-custom-select.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "native",
+    "select",
+    "dropdown",
+    "option"
+  ],
+  "author": "Olalekan Animashaun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimolalekan/react-native-custom-select/issues"
+  },
+  "homepage": "https://github.com/kimolalekan/react-native-custom-select#readme",
+  "dependencies": {
+    "expo-checkbox": "^3.0.0",
+    "react": "^18.3.1",
+    "react-native": "^0.75.3",
+    "react-native-flexbox-grid": "^0.3.2",
+    "react-native-vector-icons": "^10.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.3"
+  }
+}
