@@ -109,19 +109,19 @@ const styles = StyleSheet.create({
 
 ### `MultipleSelect`
 
-| **Property**     | **Type**                     | **Default** | **Description**                                                |
-| ---------------- | ---------------------------- | ----------- | -------------------------------------------------------------- |
-| `data`           | `SelectItem[]`               | `[]`        | The list of items for the select dropdown.                     |
-| `value`          | `string[]`                   | `undefined` | The array of selected values.                                  |
-| `placeholder`    | `string`                     | `undefined` | Placeholder text when no item is selected.                     |
-| `searchResult`   | `string`                     | `undefined` | Displays the search results.                                   |
-| `borderColor`    | `string`                     | `'#000'`    | Border color of the select component.                          |
-| `fontSize`       | `number`                     | `14`        | Font size of the text within the select component.             |
-| `containerStyle` | `StyleProp<ViewStyle>`       | `undefined` | Custom styles for the container view.                          |
-| `indexValue`     | `string`                     | `undefined` | The value of the item used for indexing in the dropdown.       |
-| `caretIcon`      | `ReactNode`                  | `undefined` | Custom icon for the caret in the dropdown.                     |
-| `closeIcon`      | `ReactNode`                  | `undefined` | Custom icon for the close button in the dropdown.              |
-| `onChange`       | `(values: string[]) => void` | `required`  | Callback function triggered when multiple selections are made. |
+| **Property**     | **Type**                  | **Default** | **Description**                                                |
+| ---------------- | ------------------------- | ----------- | -------------------------------------------------------------- |
+| `data`           | `SelectItem[]`            | `[]`        | The list of items for the select dropdown.                     |
+| `value`          | `string[]`                | `undefined` | The array of selected values.                                  |
+| `placeholder`    | `string`                  | `undefined` | Placeholder text when no item is selected.                     |
+| `searchResult`   | `string`                  | `undefined` | Displays the search results.                                   |
+| `borderColor`    | `string`                  | `'#000'`    | Border color of the select component.                          |
+| `fontSize`       | `number`                  | `14`        | Font size of the text within the select component.             |
+| `containerStyle` | `StyleProp<ViewStyle>`    | `undefined` | Custom styles for the container view.                          |
+| `indexValue`     | `string`                  | `undefined` | The value of the item used for indexing in the dropdown.       |
+| `caretIcon`      | `ReactNode`               | `undefined` | Custom icon for the caret in the dropdown.                     |
+| `closeIcon`      | `ReactNode`               | `undefined` | Custom icon for the close button in the dropdown.              |
+| `onChange`       | `(value: string) => void` | `required`  | Callback function triggered when multiple selections are made. |
 
 **Maintainers**
 
