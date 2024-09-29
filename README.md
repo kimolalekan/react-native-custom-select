@@ -11,7 +11,7 @@ A customizable React Native dropdown/select component supporting single and mult
 [Expo snack](https://snack.expo.dev/@geek_lekan/react-native-custom-select-example)
 
 
-![Screenshot](https://raw.githubusercontent.com/kimolalekan/react-native-custom-select/main/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/kimolalekan/react-native-custom-select/main/screenshot-image.png)
 
 
 ### Installation
