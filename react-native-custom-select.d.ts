@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
 declare module 'react-native-custom-select' {
-  type SelectData = {
+  type SelectItem = {
     key: string;
     value: string;
   };
