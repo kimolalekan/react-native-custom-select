@@ -2,6 +2,7 @@
 
 A customizable React Native dropdown/select component supporting single and multiple selection modes, with features like search, select all, and flexible styling options for seamless integration
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3e8baa0327a442a79d33ddf746db42fe)](https://app.codacy.com/gh/kimolalekan/react-native-custom-select/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![git workflow](https://github.com/kimolalekan/react-native-custom-select/actions/workflows/main.yml/badge.svg?branch=main)
 ![NPM Version](https://img.shields.io/npm/v/react-native-custom-select)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
