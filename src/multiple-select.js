@@ -17,9 +17,12 @@ const Multiple = ({
   placeholder = 'Choose multiple',
   searchResult = 'No result found',
   onChange,
-  borderColor,
-  containerStyle,
+  fontSize = 16,
+  borderColor = '#444',
+  containerStyle = {},
   indexValue = 'value',
+  caretIcon = <Icon name="caret-down" size={20} />,
+  closeIcon = <Icon name="close" size={20} />,
 }) => {
   const [show, setShow] = useState(value?.length ? true : false);
   const [showAction, setShowAction] = useState(false);
@@ -47,7 +50,7 @@ const Multiple = ({
   };
 
   return (
-    <>
+    <View style={containerStyle}>
       <View>
         {showAction === false ? (
           <TouchableWithoutFeedback
@@ -60,7 +63,7 @@ const Multiple = ({
             <View
               style={{
                 borderWidth: 1,
-                borderColor: '#444',
+                borderColor,
                 borderRadius: 10,
                 borderBottomRightRadius: value?.length ? 0 : 10,
                 borderBottomLeftRadius: value?.length ? 0 : 10,
@@ -70,7 +73,7 @@ const Multiple = ({
             >
               <Row>
                 <Col sm={11}>
-                  <Text style={{ fontSize: 16 }}>{placeholder}</Text>
+                  <Text style={{ fontSize }}>{placeholder}</Text>
                 </Col>
                 <Col sm={1}>
                   <TouchableOpacity
@@ -80,7 +83,7 @@ const Multiple = ({
                       setShowAction(true);
                     }}
                   >
-                    <Icon name="caret-down" size={20} />
+                    {caretIcon}
                   </TouchableOpacity>
                 </Col>
               </Row>
@@ -90,7 +93,7 @@ const Multiple = ({
           <View
             style={{
               borderWidth: 1,
-              borderColor: '#444',
+              borderColor,
               borderRadius: 10,
               padding: 15,
               marginBottom: 10,
@@ -117,7 +120,7 @@ const Multiple = ({
                     setSearch('');
                   }}
                 >
-                  <Icon name="close" size={20} />
+                  {closeIcon}
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -128,7 +131,7 @@ const Multiple = ({
           style={{
             height: value?.length || search ? 'auto' : 350,
             borderWidth: 1,
-            borderColor: '#444',
+            borderColor,
             borderRadius: 10,
             padding: 15,
             marginTop: value?.length ? -10 : 0,
@@ -170,19 +173,21 @@ const Multiple = ({
                 <Col sm={2}>
                   <Checkbox
                     value={
-                      value.filter(_item => _item === item.value)?.length === 1
+                      value.filter(_item => _item === item[indexValue])
+                        ?.length === 1
                     }
                     color={
-                      value.filter(_item => _item === item.value)?.length === 1
+                      value.filter(_item => _item === item[indexValue])
+                        ?.length === 1
                         ? '#9b9b9b'
                         : undefined
                     }
-                    onValueChange={() => handleMultipleSelect(item.value)}
+                    onValueChange={() => handleMultipleSelect(item[indexValue])}
                   />
                 </Col>
                 <Col sm={10}>
                   <TouchableOpacity>
-                    <Text style={{ fontSize: 16 }}>{item.value}</Text>
+                    <Text style={{ fontSize: 16 }}>{item[indexValue]}</Text>
                   </TouchableOpacity>
                 </Col>
               </Row>
@@ -207,7 +212,7 @@ const Multiple = ({
                   Selected ({value?.length})
                 </Text>
               </Col>
-              <Col sm={9} style={{ borderBottomWidth: 1, borderColor: '#444' }}>
+              <Col sm={9} style={{ borderBottomWidth: 1, borderColor }}>
                 <Text>&nbsp;</Text>
               </Col>
             </Row>
@@ -242,7 +247,7 @@ const Multiple = ({
           </View>
         </View>
       </View>
-    </>
+    </View>
   );
 };
 

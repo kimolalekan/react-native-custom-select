@@ -16,10 +16,12 @@ const Select = ({
   placeholder = 'Choose one',
   searchResult = 'No result found',
   onChange,
-  borderColor,
-  containerStyle,
+  borderColor = '#444',
+  fontSize = 16,
+  containerStyle = {},
   indexValue = 'value',
-  icon: ReactNode,
+  caretIcon = <Icon name="caret-down" size={20} />,
+  closeIcon = <Icon name="close" size={20} />,
 }) => {
   const [show, setShow] = useState(false);
   const [showAction, setShowAction] = useState(false);
@@ -45,7 +47,7 @@ const Select = ({
           <View
             style={{
               borderWidth: 1,
-              borderColor: borderColor || '#444',
+              borderColor,
               borderRadius: 10,
               borderBottomRightRadius: show ? 0 : 10,
               borderBottomLeftRadius: show ? 0 : 10,
@@ -55,7 +57,7 @@ const Select = ({
           >
             <Row>
               <Col sm={11}>
-                <Text style={{ fontSize: 16 }}>
+                <Text style={{ fontSize }}>
                   {value
                     ? _data.filter(item => item[indexValue] === value)[0]?.value
                     : _value
@@ -70,7 +72,7 @@ const Select = ({
                     setShowAction(true);
                   }}
                 >
-                  <Icon name="caret-down" size={20} />
+                  {caretIcon}
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -80,7 +82,7 @@ const Select = ({
         <View
           style={{
             borderWidth: 1,
-            borderColor: borderColor || '#444',
+            borderColor,
             borderRadius: 10,
             padding: 15,
             marginBottom: 10,
@@ -106,7 +108,7 @@ const Select = ({
                   setSearch('');
                 }}
               >
-                <Icon name="close" size={20} />
+                {closeIcon}
               </TouchableOpacity>
             </Col>
           </Row>
@@ -115,9 +117,9 @@ const Select = ({
 
       <View
         style={{
-          maxHeight: search ? 'auto' : 200,
+          maxHeight: show ? 200 : 'auto',
           borderWidth: 1,
-          borderColor: borderColor || '#444',
+          borderColor,
           borderRadius: 10,
           padding: 15,
           marginTop: show ? -10 : 0,

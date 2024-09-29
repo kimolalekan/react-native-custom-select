@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
 declare module 'react-native-custom-select' {
@@ -6,7 +7,7 @@ declare module 'react-native-custom-select' {
     value: string;
   };
 
-  export interface Select {
+  export interface SelectList {
     data: SelectItem[];
     value?: string;
     placeholder?: string;
@@ -15,15 +16,22 @@ declare module 'react-native-custom-select' {
     fontSize?: number;
     containerStyle?: StyleProp<ViewStyle>;
     indexValue?: string;
-    icon?: string;
+    caretIcon?: ReactNode;
+    closeIcon?: ReactNode;
     onChange: (value: string) => void;
   }
 
-  export interface MultipleProps {
+  export interface MultipleSelect {
     data: SelectItem[];
-    value?: string[];
+    value?: string;
     placeholder?: string;
     searchResult?: string;
-    onChange: (values: string[]) => void;
+    borderColor?: string;
+    fontSize?: number;
+    containerStyle?: StyleProp<ViewStyle>;
+    indexValue?: string;
+    caretIcon?: ReactNode;
+    closeIcon?: ReactNode;
+    onChange: (value: string) => void;
   }
 }

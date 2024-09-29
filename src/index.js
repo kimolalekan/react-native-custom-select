@@ -1,10 +1,10 @@
 import {
   Keyboard,
   KeyboardAvoidingView,
-  TouchableWithoutFeedback,
+  TouchableWithoutFeedback
 } from 'react-native';
-import Select from './Select';
-import Multiple from './MultiSelect';
+import Select from './select';
+import Multiple from './multiple-select';
 
 function SelectList(props) {
   return (
