@@ -2,13 +2,17 @@
 
 A customizable React Native dropdown/select component supporting single and multiple selection modes, with features like search, select all, and flexible styling options for seamless integration
 
-![git workflow](https://github.com/weissthorn/weiss/actions/workflows/main.yml/badge.svg?branch=main)
+![git workflow](https://github.com/kimolalekan/react-native-custom-select/actions/workflows/main.yml/badge.svg?branch=main)
 ![NPM Version](https://img.shields.io/npm/v/react-native-custom-select)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-[Sample codes here](/samples)
+[Sample code here](https://github.com/kimolalekan/react-native-custom-select/blob/main/examples/index.js)
 
 [Expo snack](https://snack.expo.dev/@geek_lekan/react-native-custom-select-example)
+
+
+![A beautiful sunset](/screenshot.png)
+
 
 ### Installation
 
