@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
 | `searchResult`   | `string`                  | `undefined` | Displays the search results.                             |
 | `borderColor`    | `string`                  | `'#000'`    | Border color of the select component.                    |
 | `fontSize`       | `number`                  | `14`        | Font size of the text within the select component.       |
+| `defaultPadding` | `number`                  | `14`        | Default padding within the select component.             |
 | `containerStyle` | `StyleProp<ViewStyle>`    | `undefined` | Custom styles for the container view.                    |
 | `indexValue`     | `string`                  | `undefined` | The value of the item used for indexing in the dropdown. |
 | `caretIcon`      | `ReactNode`               | `undefined` | Custom icon for the caret in the dropdown.               |
@@ -122,6 +123,7 @@ const styles = StyleSheet.create({
 | `searchResult`   | `string`                  | `undefined` | Displays the search results.                                   |
 | `borderColor`    | `string`                  | `'#000'`    | Border color of the select component.                          |
 | `fontSize`       | `number`                  | `14`        | Font size of the text within the select component.             |
+| `defaultPadding` | `number`                  | `14`        | Default padding within the select component.                   |
 | `containerStyle` | `StyleProp<ViewStyle>`    | `undefined` | Custom styles for the container view.                          |
 | `indexValue`     | `string`                  | `undefined` | The value of the item used for indexing in the dropdown.       |
 | `caretIcon`      | `ReactNode`               | `undefined` | Custom icon for the caret in the dropdown.                     |
