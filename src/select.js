@@ -17,7 +17,8 @@ const Select = ({
   searchResult = 'No result found',
   onChange,
   borderColor = '#444',
-  fontSize = 16,
+  fontSize = 14,
+  defaultPadding = 10,
   containerStyle = {},
   indexValue = 'value',
   caretIcon = <Icon name="caret-down" size={20} />,
@@ -51,7 +52,7 @@ const Select = ({
               borderRadius: 10,
               borderBottomRightRadius: show ? 0 : 10,
               borderBottomLeftRadius: show ? 0 : 10,
-              padding: 15,
+              padding: defaultPadding,
               marginBottom: 15,
             }}
           >
@@ -84,7 +85,7 @@ const Select = ({
             borderWidth: 1,
             borderColor,
             borderRadius: 10,
-            padding: 15,
+            padding: defaultPadding,
             marginBottom: 10,
             borderBottomRightRadius: show ? 0 : 10,
             borderBottomLeftRadius: show ? 0 : 10,
@@ -121,7 +122,7 @@ const Select = ({
           borderWidth: 1,
           borderColor,
           borderRadius: 10,
-          padding: 15,
+          padding: defaultPadding,
           marginTop: show ? -10 : 0,
           borderTopColor: show ? 'transparent' : '#444',
           borderTopRightRadius: show ? 0 : 10,
@@ -130,7 +131,7 @@ const Select = ({
           display: show ? 'flex' : 'none',
         }}
       >
-        <ScrollView>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
           {_data.map(item => (
             <TouchableOpacity
               key={item.key}
