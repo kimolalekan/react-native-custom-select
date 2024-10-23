@@ -19,8 +19,9 @@ const Multiple = ({
   onChange,
   fontSize = 14,
   borderColor = '#444',
+  borderRadius = 10,
   defaultPadding = 10,
-  containerStyle = {},
+  containerStyle = { marginBottom: 15 },
   indexValue = 'value',
   caretIcon = <Icon name="caret-down" size={20} />,
   closeIcon = <Icon name="close" size={20} />,
@@ -65,9 +66,9 @@ const Multiple = ({
               style={{
                 borderWidth: 1,
                 borderColor,
-                borderRadius: 10,
-                borderBottomRightRadius: value?.length ? 0 : 10,
-                borderBottomLeftRadius: value?.length ? 0 : 10,
+                borderRadius: borderRadius,
+                borderBottomRightRadius: value?.length ? 0 : borderRadius,
+                borderBottomLeftRadius: value?.length ? 0 : borderRadius,
                 padding: defaultPadding,
                 marginBottom: 10,
               }}
@@ -95,11 +96,11 @@ const Multiple = ({
             style={{
               borderWidth: 1,
               borderColor,
-              borderRadius: 10,
+              borderRadius: borderRadius,
               padding: defaultPadding,
               marginBottom: 10,
-              borderBottomRightRadius: value?.length ? 0 : 10,
-              borderBottomLeftRadius: value?.length ? 0 : 10,
+              borderBottomRightRadius: value?.length ? 0 : borderRadius,
+              borderBottomLeftRadius: value?.length ? 0 : borderRadius,
             }}
           >
             <Row>
@@ -133,12 +134,12 @@ const Multiple = ({
             height: value?.length || search ? 'auto' : 350,
             borderWidth: 1,
             borderColor,
-            borderRadius: 10,
+            borderRadius: borderRadius,
             padding: defaultPadding,
             marginTop: value?.length ? -10 : 0,
             borderTopColor: value?.length ? 'transparent' : '#444',
-            borderTopRightRadius: value?.length ? 0 : 10,
-            borderTopLeftRadius: value?.length ? 0 : 10,
+            borderTopRightRadius: value?.length ? 0 : borderRadius,
+            borderTopLeftRadius: value?.length ? 0 : borderRadius,
             display: show ? 'flex' : 'none',
           }}
         >
@@ -226,7 +227,7 @@ const Multiple = ({
                     padding: 5,
                     paddingLeft: 10,
                     paddingRight: 10,
-                    borderRadius: 10,
+                    borderRadius: borderRadius,
                     margin: 5,
                     // marginLeft: 10,
                     justifyContent: 'center',

@@ -17,9 +17,10 @@ const Select = ({
   searchResult = 'No result found',
   onChange,
   borderColor = '#444',
+  borderRadius = 10,
   fontSize = 14,
   defaultPadding = 10,
-  containerStyle = {},
+  containerStyle = { marginBottom: 15 },
   indexValue = 'value',
   caretIcon = <Icon name="caret-down" size={20} />,
   closeIcon = <Icon name="close" size={20} />,
@@ -49,15 +50,14 @@ const Select = ({
             style={{
               borderWidth: 1,
               borderColor,
-              borderRadius: 10,
-              borderBottomRightRadius: show ? 0 : 10,
-              borderBottomLeftRadius: show ? 0 : 10,
+              borderRadius: borderRadius,
+              borderBottomRightRadius: show ? 0 : borderRadius,
+              borderBottomLeftRadius: show ? 0 : borderRadius,
               padding: defaultPadding,
-              marginBottom: 15,
             }}
           >
             <Row>
-              <Col sm={11}>
+              <Col sm={10}>
                 <Text style={{ fontSize }}>
                   {value
                     ? _data.filter(item => item[indexValue] === value)[0]?.value
@@ -66,11 +66,14 @@ const Select = ({
                       : placeholder}
                 </Text>
               </Col>
-              <Col sm={1}>
+              <Col sm={2}>
                 <TouchableOpacity
                   onPress={() => {
                     setShow(true);
                     setShowAction(true);
+                  }}
+                  style={{
+                    alignItems: 'flex-end',
                   }}
                 >
                   {caretIcon}
@@ -84,15 +87,14 @@ const Select = ({
           style={{
             borderWidth: 1,
             borderColor,
-            borderRadius: 10,
+            borderRadius: borderRadius,
             padding: defaultPadding,
-            marginBottom: 10,
-            borderBottomRightRadius: show ? 0 : 10,
-            borderBottomLeftRadius: show ? 0 : 10,
+            borderBottomRightRadius: show ? 0 : borderRadius,
+            borderBottomLeftRadius: show ? 0 : borderRadius,
           }}
         >
           <Row>
-            <Col sm={11}>
+            <Col sm={10}>
               <TextInput
                 placeholderTextColor="#9B9B9B"
                 underlineColorAndroid="transparent"
@@ -101,12 +103,15 @@ const Select = ({
                 onChangeText={text => setSearch(text)}
               />
             </Col>
-            <Col sm={1}>
+            <Col sm={2}>
               <TouchableOpacity
                 onPress={() => {
                   setShowAction(false);
                   setShow(false);
                   setSearch('');
+                }}
+                style={{
+                  alignItems: 'flex-end',
                 }}
               >
                 {closeIcon}
@@ -121,13 +126,12 @@ const Select = ({
           maxHeight: show ? 200 : 'auto',
           borderWidth: 1,
           borderColor,
-          borderRadius: 10,
+          borderRadius: borderRadius,
           padding: defaultPadding,
           marginTop: show ? -10 : 0,
           borderTopColor: show ? 'transparent' : '#444',
-          borderTopRightRadius: show ? 0 : 10,
-          borderTopLeftRadius: show ? 0 : 10,
-          marginBottom: 15,
+          borderTopRightRadius: show ? 0 : borderRadius,
+          borderTopLeftRadius: show ? 0 : borderRadius,
           display: show ? 'flex' : 'none',
         }}
       >

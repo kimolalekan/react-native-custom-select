@@ -12,8 +12,9 @@ declare module 'react-native-custom-select' {
     value?: string;
     placeholder?: string;
     searchResult?: string;
-    borderColor?: string;
     fontSize?: number;
+    borderColor?: string;
+    borderColor?: string;
     containerStyle?: StyleProp<ViewStyle>;
     indexValue?: string;
     caretIcon?: ReactNode;
