@@ -89,6 +89,7 @@ const Select = ({
             borderColor,
             borderRadius: borderRadius,
             padding: defaultPadding,
+            marginBottom: 10,
             borderBottomRightRadius: show ? 0 : borderRadius,
             borderBottomLeftRadius: show ? 0 : borderRadius,
           }}
